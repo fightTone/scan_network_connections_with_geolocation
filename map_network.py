@@ -133,6 +133,7 @@ def main():
         df = pd.DataFrame(connection_details)
         print("Active Connections Details:")
         print(df)
+        df.to_csv('network_connected_details.csv', index=False)
 
     # Plot arc lines on the world map
     plot_arc_lines(current_location, foreign_locations)
