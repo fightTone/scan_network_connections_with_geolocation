@@ -87,6 +87,8 @@ def main():
     connection_details = {
         "Local Address": [],
         "Foreign Address": [],
+        "hostname": [],
+        "org": [],
         "Status": [],
         "Process Name": [],
         "City": [],
@@ -111,6 +113,10 @@ def main():
             city = ip_details.get('city', '')
             region = ip_details.get('region', '')
             country = ip_details.get('country', '')
+            hostname = ip_details.get('hostname', '')
+            org = ip_details.get('org', '')
+            connection_details["hostname"].append(hostname)
+            connection_details["org"].append(org)
             connection_details["City"].append(city)
             connection_details["Region"].append(region)
             connection_details["Country"].append(country)
